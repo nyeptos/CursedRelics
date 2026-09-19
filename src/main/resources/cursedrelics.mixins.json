@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "github.nyeptos.cursedrelics.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "HealthRegenBlockerMixin",
+    "LivingEntityAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
