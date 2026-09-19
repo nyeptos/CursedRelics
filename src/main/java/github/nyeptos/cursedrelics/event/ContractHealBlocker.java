@@ -6,9 +6,9 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 
-import static github.nyeptos.cursedrelics.Cursedrelics.MODID;
+import static github.nyeptos.cursedrelics.Cursedrelics.MOD_ID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ContractHealBlocker {
 
     @SubscribeEvent
