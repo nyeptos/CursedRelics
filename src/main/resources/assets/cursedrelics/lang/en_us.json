@@ -5,7 +5,7 @@
   "item.cursedrelics.ring_of_alchemists": "§4Ring_Of_Alchemists",
   "item.cursedrelics.ring_of_alchemists.desc": "§7This ring is the original model for the rings that alchemists have been crafting since ancient times.",
   "item.cursedrelics.runic_flask": "§4Runic Flask",
-  "item.cursedrelics.runic_flask.desc": "§7It originally bore sacred symbols used in religious rituals, but they have now faded.",
+  "item.cursedrelics.runic_flask.desc": "§7It is engraved with sacred symbols used in religious rituals, but they have now faded.",
   "tooltip.cursedrelics.runic_flask.charges": "Charges: %s / %s",
   "message.cursedrelics.runic_flask.on_cooldown": "Runic Flask is on cooldown",
   "key.cursedrelics.use_runic_flask": "Use Runic Flask",

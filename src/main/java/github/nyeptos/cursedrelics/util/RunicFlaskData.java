@@ -56,12 +56,15 @@ public class RunicFlaskData {
 
     public static int crystallize(ItemStack stack, long currentGameTime) {
         int stored = getStoredCharges(stack);
+
         if (stored >= MAX_CHARGES) {
+            setRegenAnchor(stack, currentGameTime);
             return 0;
         }
 
         long anchor = getRegenAnchor(stack, currentGameTime);
         long elapsed = Math.max(0, currentGameTime - anchor);
+
         int regenerated = (int) Math.min(elapsed / REGEN_INTERNAL_TICKS, MAX_CHARGES - stored);
 
         if (regenerated <= 0) {
@@ -69,7 +72,13 @@ public class RunicFlaskData {
         }
 
         setStoredCharges(stack, stored + regenerated);
-        setRegenAnchor(stack, anchor + (long) regenerated * REGEN_INTERNAL_TICKS);
+
+        long newAnchor = anchor + (long) regenerated + REGEN_INTERNAL_TICKS;
+
+        if (stored + regenerated >= MAX_CHARGES) newAnchor = currentGameTime;
+
+        setRegenAnchor(stack, newAnchor);
+
         return regenerated;
     }
 
@@ -110,8 +119,16 @@ public class RunicFlaskData {
 
     public static void applyInstantHeal(Player player, ItemStack stack) {
         long now = player.level().getGameTime();
+
+        System.out.println("=== BEFORE HEAL ===");
+        System.out.println(stack.getComponents());
+
         consumeCharge(stack, now);
         startCooldown(stack, now);
+
+        System.out.println("=== AFTER CONSUME ===");
+        System.out.println(stack.getComponents());
+
         player.heal(computeHealAmount(player));
         playHealSound(player);
     }

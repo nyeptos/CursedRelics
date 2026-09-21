@@ -5,7 +5,7 @@
   "item.cursedrelics.ring_of_alchemists": "§4錬金術師の指輪",
   "item.cursedrelics.ring_of_alchemists.desc": "§7この指輪は錬金術師達によって古くから錬成されていた指輪の原典だ。",
   "item.cursedrelics.runic_flask": "§4ルーンの小瓶",
-  "item.cursedrelics.runic_flask.desc": "§7元々祭祀に使われるような神聖なシンボルが刻まれているが、今はもう薄れてしまっている。",
+  "item.cursedrelics.runic_flask.desc": "§7祭祀に使われる神聖なシンボルが刻まれているが、今はもう薄れてしまっている。",
   "tooltip.cursedrelics.runic_flask.charges": "使用回数: %s / %s",
   "message.cursedrelics.runic_flask.on_cooldown": "クールタイム中です",
   "key.cursedrelics.use_runic_flask": "ルーンの小瓶を使用",

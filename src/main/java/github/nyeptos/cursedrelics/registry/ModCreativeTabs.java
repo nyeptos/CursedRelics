@@ -20,6 +20,7 @@ public class ModCreativeTabs {
                     .displayItems((params, output) -> {
                         output.accept(ModItems.FORGOTTEN_CONTRACT.get());
                         output.accept(ModItems.RING_OF_ALCHEMISTS.get());
+                        output.accept(ModItems.RUNIC_FLASK.get());
                     })
                     .build());
 
