@@ -129,11 +129,11 @@ public class RunicFlaskData {
     }
 
     public static void playHealSound(Player player) {
-        player.level().playSound(null, player.blockPosition(), SoundEvents.GENERIC_DRINK, SoundSource.PLAYERS, 0.6F, 1.6F);
+        player.level().playSound(null, player.blockPosition(), SoundEvents.BREWING_STAND_BREW, SoundSource.PLAYERS, 0.6F, 1.6F);
     }
 
     public static void playRegenSound(Player player) {
-        player.level().playSound(null, player.blockPosition(), SoundEvents.BREWING_STAND_BREW, SoundSource.PLAYERS, 0.5F, 1.4F);
+        player.level().playSound(null, player.blockPosition(), SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.PLAYERS, 0.5F, 1.0F);
     }
 
     private RunicFlaskData() {
